@@ -44,8 +44,11 @@ password.sendKeys("INDIA777vik$");
 // click on Sign in button Using Locator "XPath" //button[contains(text(), 'Sign in')]
 WebElement SignIn = driver.findElement(By.xpath("//button[contains(text(), 'Sign in')]"));
 SignIn.click();
+Thread.sleep(5000);
+WebElement messagebutton = driver.findElement(By.xpath("//div[@class='msg-overlay-bubble-header__controls display-flex']/button[2]"));
+messagebutton.click();
 // click on start a post Using Locator "XPath" //button[@id='ember25']/span
-WebElement startpost = driver.findElement(By.xpath("//button[@id='ember25']/span"));
+WebElement startpost = driver.findElement(By.xpath("//span[text()='Start a post']"));
 startpost.click();
 // click on button post to anyone Using Locator "XPath" //button[@class='share-unified-settings-entry-button']
 WebElement postanyone = driver.findElement(By.xpath("//button[@class='share-unified-settings-entry-button']"));
@@ -64,21 +67,17 @@ typearea.sendKeys("This is a test post");
 WebElement postbutton = driver.findElement(By.xpath("//span[text()='Post']"));
 postbutton.click();
 // Click on Who's viewed your profile Using Locator "XPath" //a[@href='/me/profile-views/']
-WebElement views = driver.findElement(By.xpath("//a[@href='/me/profile-views/']"));
+WebElement views = driver.findElement(By.xpath("//a[@href='/dashboard/']"));
 views.click();
 // get text of element displaying the number of views Using Locator "XPath" //p[@class='text-body-medium-bold pr1 text-heading-large']
-WebElement numberofviews = driver.findElement(By.xpath("//p[@class='text-body-medium-bold pr1 text-heading-large']"));
+WebElement numberofviews = driver.findElement(By.xpath("//a[@href='https://www.linkedin.com/me/profile-views']//div[@class='pcd-analytics-view-item']//p"));
 String numviews = numberofviews.getText();
 System.out.println("Number of views " + numviews);
-// Click on Home button Using Locator "XPath" //span[text()='Home']
-WebElement homebutton = driver.findElement(By.xpath("//span[text()='Home']"));
-homebutton.click();
+
 // Click on Impressions of your post Using Locator "XPath" //a[@href='/in/vikram-singh-037305126/recent-activity/shares/']
-WebElement impressions = driver.findElement(By.xpath("//a[@href='/in/vikram-singh-037305126/recent-activity/shares/']"));
-impressions.click();
+WebElement impressions = driver.findElement(By.xpath("//a[@href='https://www.linkedin.com/analytics/creator/content?timeRange=past_7_days&dimension=INDUSTRY&metricType=IMPRESSIONS']//div[@class='pcd-analytics-view-item']//p"));
 // get text of element displaying impressions Using Locator "XPath" //span[@class='ca-entry-point__num-views t-14']
-WebElement impressionnum = driver.findElement(By.xpath("//span[@class='ca-entry-point__num-views t-14']"));
-String impressview = impressionnum.getText();
+String impressview = impressions.getText();
 System.out.println("Number of impression views " + impressview);
        
     }
