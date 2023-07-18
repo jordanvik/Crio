@@ -36,11 +36,11 @@ driver.get("https://in.linkedin.com/");
 // click on email or phone field Using Locator "ID" session_key
 WebElement emailphone = driver.findElement(By.id("session_key"));
 // send keys Using Locator "ID" session_key/xyz@gmail.com
-emailphone.sendKeys("jordan_7_7_7@outlook.com");
+emailphone.sendKeys("xyz@gmail.com");
 // click on password field Using Locator "ID" session_password
 WebElement password = driver.findElement(By.id("session_password"));
 // send keys Using Locator "ID" session_password/12345678
-password.sendKeys("INDIA777vik$");
+password.sendKeys("12345678");
 // click on Sign in button Using Locator "XPath" //button[contains(text(), 'Sign in')]
 WebElement SignIn = driver.findElement(By.xpath("//button[contains(text(), 'Sign in')]"));
 SignIn.click();
