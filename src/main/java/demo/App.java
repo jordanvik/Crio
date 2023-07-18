@@ -22,12 +22,11 @@ public class App {
     //  LinkedPost post = new LinkedPost();
     //  post.testCase01();
 
-    LegalX loginX = new LegalX();
-    loginX.testCase01();
 
         //END Tests
         // count.endTest();
         // searchAma.endTest();
+        //post.endTest();
      
       
         
