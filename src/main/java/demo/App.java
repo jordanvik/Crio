@@ -22,15 +22,15 @@ public class App {
     //  LinkedPost post = new LinkedPost();
     //   post.testCase01();
 
-    ImageURL urlimg = new ImageURL();
-    urlimg.testCase01();
+    // ImageURL urlimg = new ImageURL();
+    // urlimg.testCase01();
 
 
         //END Tests
         // count.endTest();
         // searchAma.endTest();
         // post.endTest();
-        urlimg.endTest();
+        // urlimg.endTest();
      
       
         
