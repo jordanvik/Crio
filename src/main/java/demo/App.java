@@ -19,14 +19,18 @@ public class App {
     //    SearchAmazon searchAma = new SearchAmazon();
     //    searchAma.testCase01();
 
-     LinkedPost post = new LinkedPost();
-      post.testCase01();
+    //  LinkedPost post = new LinkedPost();
+    //   post.testCase01();
+
+    ImageURL urlimg = new ImageURL();
+    urlimg.testCase01();
 
 
         //END Tests
         // count.endTest();
         // searchAma.endTest();
-        post.endTest();
+        // post.endTest();
+        urlimg.endTest();
      
       
         
