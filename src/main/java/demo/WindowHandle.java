@@ -29,7 +29,7 @@ public class WindowHandle {
     public void testCase01() {
         // Navigate to URL
         // https://www.w3schools.com/jsref/tryit.aspfilename=tryjsref_win_open
-        driver.get("https://www.w3schools.com/jsref/tryit.aspfilename=tryjsref_win_open");
+        driver.get("https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_win_open");
         // switchTo() to iframe Using Locator "ID" iframeResult
         driver.switchTo().frame("iframeResult");
         // Click on button for Try it Using Locator "XPath" //button[text()='Try it']

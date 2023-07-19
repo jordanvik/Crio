@@ -32,14 +32,14 @@ public class IMDBRating {
         driver.get("https://www.imdb.com/chart/top");
         // Click on Sort By Rankings option using dropdown Using Locator "XPath"
         // //*[@id='sort-by-selector']
-        WebElement sortBy = driver.findElement(By.xpath("//*[@id=\"lister-sort-by-options\"]"));
+        WebElement sortBy = driver.findElement(By.xpath("//select[@id='sort-by-selector']"));
         Select dropdown = new Select(sortBy);
 
         dropdown.selectByVisibleText("Ranking");
         // getText() for first movie Using Locator "XPath"
         // //ul[@role='presentation']/li/div[2]/div/div/div/a[@href='/title/tt0111161/?ref_=chttp_t_1']/h3
         String highestRatedMovie = driver
-                .findElement(By.xpath("//*[@id=\"main\"]/div/span/div[1]/div/div[3]/table/tbody/tr[1]/td[2]"))
+                .findElement(By.xpath("//ul[@role='presentation']/li/div[2]/div/div/div/a[@href='/title/tt0111161/?ref_=chttp_t_1']/h3"))
                 .getText();
         // sort the movies by release date using dropdown Using Locator "XPath"
         // //*[@id='sort-by-selector']
@@ -47,12 +47,12 @@ public class IMDBRating {
         // getText() of oldest movie Using Locator "XPath"
         // //ul[@role='presentation']/li[250]/div[2]/div/div/div/a/h3
         String oldestMovie = driver
-                .findElement(By.xpath("//*[@id=\"main\"]/div/span/div[1]/div/div[3]/table/tbody/tr[250]/td[2]"))
+                .findElement(By.xpath("//ul[@role='presentation']/li[250]/div[2]/div/div/div/a/h3"))
                 .getText();
         // getText() of newest movie Using Locator "XPath"
         // //ul[@role='presentation']/li/div[2]/div/div/div/a[@href='/title/tt9362722/?ref_=chttp_t_1']/h3
         String newestMovie = driver
-                .findElement(By.xpath("//*[@id=\"main\"]/div/span/div[1]/div/div[3]/table/tbody/tr[1]/td[2]"))
+                .findElement(By.xpath("//ul[@role='presentation']/li/div[2]/div/div/div/a[@href='/title/tt9362722/?ref_=chttp_t_1']/h3"))
                 .getText();
         // sort the movies by number of ratings using dropdown Using Locator "XPath"
         // //*[@id='sort-by-selector']
@@ -60,12 +60,12 @@ public class IMDBRating {
         // getText() of movie with most user ratings Using Locator "XPath"
         // //ul[@role='presentation']/li/div[2]/div/div/div/a[@href='/title/tt0111161/?ref_=chttp_t_1']/h3
         String userRating = driver
-                .findElement(By.xpath("//*[@id=\"main\"]/div/span/div[1]/div/div[3]/table/tbody/tr[1]/td[2]"))
+                .findElement(By.xpath("//ul[@role='presentation']/li/div[2]/div/div/div/a[@href='/title/tt0111161/?ref_=chttp_t_1']/h3"))
                 .getText();
         // display size of movies in total Using Locator "XPath"
         // //div[@class='sc-f8c44fe8-0 leyYCk cli-poster-container']
         int totalMovies = driver
-                .findElements(By.xpath("//*[@id=\"main\"]/div/span/div[1]/div/div[3]/table/tbody/tr/td[2]")).size();
+                .findElements(By.xpath("//div[@class='sc-f8c44fe8-0 leyYCk cli-poster-container']")).size();
 
         System.out.println(
                 "Highest Rated Movie = " + highestRatedMovie + " Oldest Movie = " + oldestMovie + " Newest Movie = "

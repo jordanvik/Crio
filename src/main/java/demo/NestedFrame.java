@@ -27,44 +27,37 @@ public class NestedFrame {
     public void testCase01() {
         // Navigate to URL https://the-internet.herokuapp.com/nested_frames
         driver.get("https://the-internet.herokuapp.com/nested_frames");
-        // Locate the element for top frame Using Locator "Name" frame-top
-        WebElement top = driver.findElement(By.name("frame-top"));
         // driver.switchTo() frame top
-        driver.switchTo().frame(top);
-        // Locate the element for left frame Using Locator "Name" Frame-left
-        WebElement left = driver.findElement(By.name("frame-left"));
+        driver.switchTo().frame("frame-top");
         // driver.switchTo() frame left Using Locator "Name"
-        driver.switchTo().frame(left);
+        driver.switchTo().frame("frame-left");
         // getText() for the frame
-        String leftframetxt = left.getText();
-        System.out.println("Left frame text" + leftframetxt);
+        String frameLeft = driver.findElement(By.xpath("//*[contains(text(), 'LEFT')]")).getText();
+        System.out.println("Left frame text " + frameLeft);
         // driver.switchTo().parent() element.getText()
         driver.switchTo().parentFrame();
         // Locate the element for middle frame Using Locator "Name" frame-middle
-        WebElement middle = driver.findElement(By.name("frame-middle"));
         // driver.switchTo() frame middle Using Locator "Name"
-        driver.switchTo().frame(middle);
-        // getText() for the frame element.getText()
-        String middleframetxt = middle.getText();
-        System.out.println("middle frame text" + middleframetxt);
+        driver.switchTo().frame("frame-middle");
+         // getText() for the frame element.getText()
+        String frameMiddle = driver.findElement(By.xpath("//*[contains(text(), 'MIDDLE')]")).getText();
+        System.out.println("middle frame text " + frameMiddle);
         // driver.switchTo().parent()
         driver.switchTo().parentFrame();
         // Locate the element for right frame Using Locator "Name" frame-right
-        WebElement right = driver.findElement(By.name("frame-right"));
         // driver.switchTo() frame right Using Locator "Name"
-        driver.switchTo().frame(right);
+        driver.switchTo().frame("frame-right");
         // getText() for the frame element.getText()
-        String rightframetxt = right.getText();
-        System.out.println("right frame text" + rightframetxt);
+        String frameRight = driver.findElement(By.xpath("//*[contains(text(), 'RIGHT')]")).getText();
+        System.out.println("right frame text " + frameRight);
         // driver.switchTo().defaultcontent()
         driver.switchTo().defaultContent();
         // Locate the element for bottom frame Using Locator "Name" frame-bottom
-        WebElement bottom = driver.findElement(By.name("frame-bottom"));
         // driver.switchTo() frame bottom Using Locator "Name"
-        driver.switchTo().frame(bottom);
+        driver.switchTo().frame("frame-bottom");
         // getText() for the frame element.getText()
-        String bottomframetxt = bottom.getText();
-        System.out.println("Bottom frame text" + bottomframetxt);
+        String frameBottom = driver.findElement(By.xpath("//*[contains(text(), 'BOTTOM')]")).getText();
+        System.out.println("Bottom frame text " + frameBottom);
         // driver.switchTo().defaultcontent()
         driver.switchTo().defaultContent();
 

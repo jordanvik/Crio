@@ -31,8 +31,8 @@ public class App {
         // WindowHandle handlewindow = new WindowHandle();
         // handlewindow.testCase01();
 
-        // IMDBRating IMDB = new IMDBRating();
-        // IMDB.testCase01();
+        IMDBRating IMDB = new IMDBRating();
+        IMDB.testCase01();
 
 
         // END Tests
@@ -42,7 +42,7 @@ public class App {
         // urlimg.endTest();
         // frame.endTest();
         // handlewindow.endTest();
-        // IMDB.endTest();
+         IMDB.endTest();
 
         // tests.endTest(); // End your test by clearning connections and closing
         // browser
